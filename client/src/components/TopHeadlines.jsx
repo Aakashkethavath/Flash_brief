@@ -16,7 +16,7 @@ function TopHeadlines() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    fetch(`http://localhost:3000/top-headlines?language=en&pageSize=${pageSize}&page=${page}`)
+    fetch(`/top-headlines?language=en&pageSize=${pageSize}&page=${page}`)
       .then((response) => response.ok ? response.json() : Promise.reject('Fetch error'))
       .then((json) => {
         if (json.success) {

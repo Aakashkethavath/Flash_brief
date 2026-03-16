@@ -24,7 +24,7 @@ function CountryNews() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    fetch(`http://localhost:3000/country/${params.iso}?page=${page}&pageSize=${pageSize}`)
+    fetch(`/country/${params.iso}?page=${page}&pageSize=${pageSize}`)
       .then((response) => {
         if (response.ok) return response.json();
         throw new Error('Network response was not ok');

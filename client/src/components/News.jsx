@@ -22,7 +22,7 @@ function News() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    fetch(`http://localhost:3000/news?page=${page}&pageSize=${pageSize}`)
+    fetch(`/news?page=${page}&pageSize=${pageSize}`)
       .then(response => {
         if (response.ok) return response.json();
         throw new Error('Network response was not ok');
