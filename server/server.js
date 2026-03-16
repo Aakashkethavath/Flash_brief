@@ -16,7 +16,8 @@ app.use(helmet({
 const allowedOrigins = [
     'http://localhost:5173', // Local Vite dev server
     'http://localhost:3000', // Local backup
-    process.env.FRONTEND_URL // Vercel production URL (can be comma separated or single)
+    'https://flashbrief.vercel.app', // Explicit Vercel frontend
+    process.env.FRONTEND_URL // Fallback for other domains
 ].filter(Boolean);
 
 app.use(cors({
